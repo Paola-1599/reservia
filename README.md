@@ -175,7 +175,7 @@ Las relaciones se gestionan mediante claves foráneas (FK):
 ### Clonar Repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/RESERVIA.git
+git clone https://github.com/Paola-1599/reservia.git
 cd RESERVIA
 ```
 
