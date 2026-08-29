@@ -1,0 +1,93 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal {
+    background-color: var(--surface2);
+    border-radius: 10px;
+    padding: 50px 55px;
+    width: 90%;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+
+}
+
+.dangerTitle{
+    font-size: 30px;
+    color: var(--primaryB);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text{
+    font-size: 16px;
+    color: var(--textBody);
+    margin-bottom: 28px;
+    line-height: 2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--borderInput);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.primary {
+    background-color: var(--primaryB);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.primary:hover {
+    background-color: #5aa5b8;
+}
+
+.secondary {
+    background-color: #988f80;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.secondary:hover {
+    background-color: var(--textSubtle);
+}
+
+.danger {
+    background-color: var(--feedbackError);
+}
+.danger:hover {
+    background-color: #d64545;
+}

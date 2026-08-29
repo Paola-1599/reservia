@@ -1,0 +1,129 @@
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*---------------- Header ----------------*/
+
+.headerCatalogo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5%;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: left;
+}
+
+.btnAtras {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--textTitle);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0;
+    transition: color .2s ease;
+}
+
+.iconAtras {
+    width: 30px;
+    margin-right: 12px;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+.headerCatalogo h1 {
+    color: var(--primaryB);
+    font-size: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+.contenedor hr {
+    border: none;
+    border-top: 2px solid var(--primaryB);
+    width: 90%;
+    margin: 10px auto 30px;
+}
+
+/*---------------- Tarjeta ----------------*/
+
+.tarjeta {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--borderInput);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.10);
+}
+
+.imagenServicio {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.infoServicio {
+    color: var(--textTitle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoServicio h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: var(--textTitle);
+}
+
+.descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--textBody);
+    margin-bottom: 24px;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primaryB);
+    margin-bottom: 32px;
+}
+
+.btnSeleccionar {
+    align-self: flex-start;
+    background-color: var(--primaryB);
+    color: #111827;
+    border: 2px solid #111827;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btnSeleccionar:hover {
+    background-color: var(--primaryG);
+}

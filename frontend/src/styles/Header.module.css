@@ -1,0 +1,48 @@
+
+.div-padre-header{
+    display: flex;
+    width: 100%;
+    height: var(--header-height);
+    position: relative;
+}
+
+.contenedor-barra {
+  position: relative;
+  width: 100%;
+  height: var(--header-height);
+}
+
+.barra {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+    90deg,
+    #F97316 0%,
+    #FB923C 55%,
+    #FDBA74 100%
+  );
+
+  border-bottom: 4px solid #F97316;
+}
+
+/* Logo */
+
+.logo {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFF7ED;
+  background: #FFFFFF;
+  box-shadow: 0 10px 24px rgba(17,24,39,.18);
+  z-index: 10;
+  pointer-events: none;
+}

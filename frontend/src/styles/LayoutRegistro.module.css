@@ -1,0 +1,98 @@
+/* PALETA DE COLORES RESERVIA */
+:root {
+  --background: #FFF8F2;
+  --primaryG: #C2410C;
+  --primaryB: #F97316;
+  --surface1: #FFFFFF;
+  --surface2: #FFF1E7;
+  --textTitle: #111827;
+  --textBody: #4B5563;
+  --textSubtle: #9CA3AF;
+  --borderInput: #E5E7EB;
+  --feedbackError: #DC2626;
+  --inputFill: #FFFFFF;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.mainContainer {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(249,115,22,.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(17,24,39,.06), transparent 30%),
+    linear-gradient(180deg, #FFF8F2 0%, #FFFDFB 62%, #FFF4EA 100%);
+}
+
+.mainContainer::before,
+.mainContainer::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.mainContainer::before {
+  width: 220px;
+  height: 220px;
+  top: 140px;
+  left: -70px;
+  background: rgba(249,115,22,.10);
+}
+
+.mainContainer::after {
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  bottom: 90px;
+  background: rgba(17,24,39,.05);
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  padding: 0 24px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* FORMULARIO */
+.formContainer {
+  flex: 0 0 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,248,242,.98) 100%);
+  padding: 24px 28px;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 5;
+  border: 1px solid rgba(249,115,22,.14);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(17,24,39,.10), 0 10px 30px rgba(249,115,22,.08);
+}
+
+/* IMÁGENES LATERALES */
+.imagenL,
+.imagenR {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .formContainer {
+    flex: 0 0 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}

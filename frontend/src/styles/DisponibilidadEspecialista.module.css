@@ -1,0 +1,176 @@
+
+.CajaPadre {
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*---------------- Header ----------------*/
+
+.headerSeleccionarEspecialistas {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5%;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: left;
+}
+
+.btnAtras {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--textTitle);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0;
+    transition: color .2s ease;
+}
+
+.iconAtras {
+    width: 30px;
+    margin-right: 12px;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+.headerSeleccionarEspecialistas h1 {
+    color: var(--primaryB);
+    font-size: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+.CajaPadre hr {
+    border: none;
+    border-top: 2px solid var(--primaryB);
+    width: 90%;
+    margin: 10px auto 30px;
+}
+
+/*---------------- Contenedor ----------------*/
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*---------------- Calendario ----------------*/
+
+.calendario {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.diaDisponible {
+    background-color: #FFFFFF;
+    color: var(--textTitle);
+    border: 1px solid var(--borderInput);
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.diaActivo {
+    background-color: var(--primaryB) !important;
+    color: #111827 !important;
+    border: 2px solid #111827;
+    font-weight: 600;
+}
+
+:global(.rdp-day_disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dia {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--borderInput);
+    color: var(--textTitle);
+    font-weight: 600;
+    background: #FFFFFF;
+}
+
+/*---------------- Bloques horarios ----------------*/
+
+.bloques {
+    margin-bottom: 30px;
+}
+
+.bloquesGrid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bloque {
+    padding: 10px 15px;
+    border: 1px solid var(--borderInput);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: var(--textTitle);
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.bloque:hover {
+    border-color: var(--primaryB);
+}
+
+.bloqueActivo {
+    background-color: var(--primaryB);
+    color: #111827;
+    border: 2px solid #111827;
+}
+
+.bloques h2 {
+    font-size: 16px;
+    color: var(--textTitle);
+}
+
+/*---------------- Botón ----------------*/
+
+.botonContinuar {
+    padding: 12px 20px;
+    max-width: 150px;
+    border: 2px solid #111827;
+    border-radius: 8px;
+    background-color: var(--primaryB);
+    color: #111827;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.botonContinuar:hover:not(:disabled) {
+    background-color: var(--primaryG);
+}
+
+.botonContinuar:disabled {
+    background-color: #D1D5DB;
+    border-color: #D1D5DB;
+    color: #6B7280;
+    cursor: not-allowed;
+}

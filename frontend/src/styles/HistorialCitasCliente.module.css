@@ -1,0 +1,289 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.headerWrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--primaryB);
+  font-size: 30px;
+  margin: 0;
+}
+
+.hr {
+  border: none;
+  border-top: 2px solid var(--primaryB);
+  width: 90%;
+  margin: 10px auto 30px;
+}
+
+.btnAtras {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--textTitle);
+  font-size: 16px;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.iconAtras {
+  width: 30px;
+  margin-right: 12px;
+}
+
+.btnAtras:hover {
+  color: var(--primaryB);
+}
+
+.tableMainContainer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 30px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.searchContainer label {
+  padding: 0 10px;
+  color: var(--textBody);
+  font-weight: 600;
+}
+
+.inputSearch {
+  width: 260px;
+  padding: 10px 12px;
+  border: 2px solid var(--borderInput);
+  background-color: var(--surface1);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--textTitle);
+  transition: all 0.2s ease;
+}
+
+.inputSearch::placeholder {
+  color: var(--textSubtle);
+}
+
+.inputSearch:focus {
+  border-color: var(--primaryB);
+  outline: none;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.25);
+}
+
+.stateMessage,
+.errorMessage {
+  text-align: center;
+  color: var(--textBody);
+}
+
+.errorMessage {
+  color: var(--feedbackError);
+}
+
+.tableContainer {
+  width: 100%;
+  position: relative;
+  background: var(--surface1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.15);
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--textBody);
+  font-size: 14px;
+}
+
+.table thead {
+  background: var(--surface2);
+  border-bottom: 2px solid var(--primaryB);
+}
+
+.table th {
+  padding: 14px;
+  font-weight: 700;
+  color: var(--textTitle);
+}
+
+.table td {
+  padding: 12px;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--surface2);
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: var(--surface1);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(249, 115, 22, 0.08);
+}
+
+.table td,
+.table th {
+  border-right: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.table td:last-child,
+.table th:last-child {
+  border-right: none;
+}
+
+.badgeProgramada,
+.badgeCancelada {
+  color: #111827;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.badgeProgramada {
+  background: var(--primaryB);
+}
+
+.badgeCancelada {
+  background: var(--feedbackError);
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnPdf {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #111827;
+  cursor: pointer;
+  background-color: var(--primaryB);
+  color: #111827;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btnPdf:hover {
+  background-color: var(--primaryG);
+  transform: translateY(-2px);
+}
+
+.footerTable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rowSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--textBody);
+  font-weight: 600;
+}
+
+.rowSelector select {
+  border: 2px solid var(--borderInput);
+  border-radius: 8px;
+  background-color: var(--surface1);
+  padding: 7px 10px;
+  color: var(--textTitle);
+}
+
+.rowSelector select:focus {
+  outline: none;
+  border-color: var(--primaryB);
+}
+
+.paginationNav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pageItem button {
+  border: 1px solid var(--borderInput);
+  border-radius: 8px;
+  background: var(--surface1);
+  color: var(--textTitle);
+  padding: 8px 12px;
+  cursor: pointer;
+  min-width: 38px;
+  transition: all 0.2s ease;
+}
+
+.pageItem button:hover:not(:disabled) {
+  background: var(--primaryB);
+  color: #111827;
+  border-color: #111827;
+}
+
+.pageItem button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  padding: 0 8px;
+  color: var(--textBody);
+  font-weight: 600;
+}
+
+@media (max-width: 780px) {
+  .searchContainer {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .inputSearch {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .actionsRow {
+    justify-content: flex-start;
+  }
+
+  .footerTable {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

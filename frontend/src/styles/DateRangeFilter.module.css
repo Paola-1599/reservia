@@ -1,0 +1,38 @@
+
+
+.filterContainer {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 6px 16px rgba(17, 24, 39, 0.15);
+    border: 1px solid #D1D5DB;
+}
+
+.filterContainer label {
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.filterContainer input[type="datetime-local"] {
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #111827;
+}
+
+.filterContainer input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #F97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}

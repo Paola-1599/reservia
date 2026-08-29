@@ -1,0 +1,168 @@
+.headerResumenCita {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 5%;
+  margin-top: 20px;
+  gap: 10px;
+  text-align: left;
+}
+
+/* BOTÓN ATRÁS */
+
+.btnAtras {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--textTitle);
+  font-size: 16px;
+  padding: 0;
+  transition: color .25s ease;
+}
+
+.iconAtras {
+  width: 30px;
+}
+
+.btnAtras:hover {
+  color: var(--primaryB);
+}
+
+/* HEADER */
+
+.headerResumenCita h1 {
+  margin: 0;
+  color: var(--primaryB);
+  font-size: 30px;
+}
+
+.contenedor hr {
+  border: none;
+  border-top: 2px solid var(--primaryB);
+  width: 90%;
+  margin: 10px auto 30px;
+}
+
+/* CONTENEDOR */
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TARJETA */
+
+.card {
+  background: var(--inputFill);
+  border-radius: 18px;
+  padding: 28px;
+  margin: 0 auto;
+  width: 100%;
+
+  border: 1px solid rgba(113,176,197,.18);
+
+  box-shadow:
+      0 8px 26px rgba(113,176,197,.12),
+      0 4px 12px rgba(249,115,22,.08);
+
+  transition: all .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+      0 10px 30px rgba(113,176,197,.18),
+      0 6px 16px rgba(249,115,22,.12);
+}
+
+/* TÍTULO */
+
+.card h2 {
+  margin: 0 0 18px;
+  color: var(--primaryB);
+  font-size: 24px;
+}
+
+/* TEXTO */
+
+.card p {
+  margin: 12px 0;
+  color: var(--textBody);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* BOTÓN */
+
+.botonConfirmar {
+  width: fit-content;
+  min-width: 220px;
+
+  margin-top: 10px;
+
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--primaryB);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+}
+
+.botonConfirmar:hover {
+  background: var(--primaryG);
+  color: #111827;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(166,216,133,.45);
+}
+
+.botonConfirmar:active {
+  transform: scale(.98);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .headerResumenCita {
+    width: 95%;
+    padding-left: 2.5%;
+  }
+
+  .contenedor {
+    width: 95%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 21px;
+  }
+
+  .botonConfirmar {
+    width: 100%;
+  }
+}
+

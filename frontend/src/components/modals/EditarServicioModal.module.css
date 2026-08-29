@@ -1,0 +1,155 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: var(--surface2);
+    border-radius: 10px;
+    padding: 50px 55px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.modal h2 {
+    text-align: left;
+    color: var(--textTitle);
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion {
+    grid-column: 1 / -1;
+}
+
+.grupo label {
+    align-items: start;
+    font-weight: semi-bold;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textBody);
+}
+
+.grupo input,
+.grupo textarea {
+    padding: 10px;
+    border: 1px solid var(--borderInput);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: var(--inputFill);
+    color: var(--textBody);
+}
+
+.grupo input {
+    height: 25px;
+}
+
+.grupo textarea {
+    min-height: 110px;
+    resize: none;
+}
+
+.imagenSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-weight: semi-bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textBody);
+}
+
+.fileInput {
+    display: none;
+}
+
+.btnImagen {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 8px 16px;
+    border: 1px solid var(--primaryB);
+    border-radius: 6px;
+    background-color: var(--surface1);
+    color: var(--primaryB);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnImagen:hover {
+    background-color: var(--borderInput);
+    color: white;
+}
+
+.nombreArchivo {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--textSubtle);
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.guardar {
+    background-color: var(--primaryB);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.guardar:hover {
+    background-color: #5aa5b8;
+}
+
+.cancelar {
+    background-color: #988f80;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cancelar:hover {
+    background-color: var(--textSubtle);
+}

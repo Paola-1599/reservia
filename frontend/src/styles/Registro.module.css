@@ -1,0 +1,350 @@
+
+
+.container {
+  background: linear-gradient(180deg, rgba(255,248,242,.95), rgba(255,255,255,.98));
+}
+
+
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.logoContainer img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primaryB);
+  background: var(--inputFill);
+  padding: 10px;
+  box-shadow: 0 10px 24px rgba(249,115,22,.18);
+}
+
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+
+.logo img {
+    height: 80px;
+
+}
+
+
+.formContainer {
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,248,242,.98) 100%);
+    padding: 20px;
+    display: flex;
+    flex: 0 0 700px;
+    flex-direction: column;
+    margin: 0px;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 5;
+    border: 1px solid rgba(249,115,22,.14);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(17,24,39,.10), 0 10px 30px rgba(249,115,22,.08);
+}
+
+
+.headerForm {
+  display: flex;
+  flex-direction: column;   
+  align-items: stretch;      
+  gap: 5px;             
+  margin-bottom: 20px;
+}
+
+
+.headerForm h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight:600;
+    text-align: center;
+
+}
+
+
+.headerForm h1 .tituloMarca { 
+    color: var(--primaryB);
+  font-weight: 800;
+}
+
+.btnAtras {
+  background: none;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--textTitle);
+}
+
+    
+
+.iconAtras {
+  width: 30px;
+  margin-right: 12px;
+}
+
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+
+.div-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.div-formulario form label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+
+.label-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--textTitle);
+}
+
+.label-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--textTitle);
+}
+
+
+.div-formulario form input, form select{
+  height: 42px;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 15px 0;
+  border: 2px solid var(--borderInput);
+  border-radius: 6px;
+  background-color: var(--surface1);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.div-formulario form select {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: var(--surface2);
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23F97316' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+
+.div-formulario select:hover, input:hover {
+border-color: var(--primaryB);
+}
+
+.div-formulario select:focus, input:focus {
+    border-color: var(--primaryB);
+  background-color: var(--inputFill);
+    outline-color: var(--primaryB);
+}
+
+.required {
+    color: var(--primaryB);
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.error input {
+  border-color: var(--feedbackError);
+  background-color: var(--background);
+  outline-color: var(--feedbackError);
+}
+
+.error .required {
+  color: var(--feedbackError);
+}
+
+
+.errorMessage.active {
+  display: block;
+}
+
+.doc-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doc-group input {
+  flex: 2;
+}
+
+.doc-group select {
+  flex: 1;
+}
+
+.passwordField{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.passwordField input {
+  flex: 1;
+}
+
+.passwordField i {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: var(--textSubtle);
+}
+
+.password-hint {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--textSubtle);
+    margin: 4px 0 4px 20px;
+}
+
+.passwordStrength {
+  width: 100%;
+  height: 8px;
+  background-color: #E5E7EB;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.strengthBar {
+  width: 0%;
+  height: 100%;
+  background-color: var(--feedbackError);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.btnCreate {
+  background-color: var(--primaryB);
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btnCreate:hover {
+  background-color: var(--primaryG);
+}
+
+/*Responsivo*/
+
+@media (max-width: 992px) {
+  .formContainer {
+    flex: 0 0 90%;
+    padding: 15px;
+  }
+
+  .headerForm h1 {
+    font-size: 26px;
+  }
+
+  .btnCreate {
+    width: 160px;
+    padding: 16px;
+  }
+}
+
+/* Móviles (pantallas ≤ 768px) */
+@media (max-width: 768px) {
+  .formContainer {
+    flex: 1 1 auto;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  .headerForm h1 {
+    font-size: 22px;
+  }
+
+  .div-formulario form {
+    padding: 0 10px;
+  }
+
+  .div-formulario form > div {
+    margin-bottom: 10px;
+  }
+
+  .btnCreate {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Pantallas muy pequeñas (≤ 480px) */
+@media (max-width: 480px) {
+  .header-form h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .btnAtras {
+    font-size: 16px;
+  }
+
+  .btnCreate {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+
+.errorMessage {
+  display: block;
+  color: var(--feedbackError);
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 16px;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,174 @@
+body {
+  background: linear-gradient(180deg, #FFF8F2 0%, #FFFFFF 55%, #FFF4EA 100%);
+  font-family: "Open Sans", sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background:
+    radial-gradient(circle at top left, rgba(249,115,22,.08), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(17,24,39,.05), transparent 28%),
+    linear-gradient(180deg, #FFF8F2 0%, #FFFFFF 100%);
+  box-sizing: border-box;
+}
+
+.div-padre {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* COLUMNA IZQUIERDA */
+.div-1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 560px;
+  align-content: flex-start;
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,248,242,.98) 100%);
+  border: 1px solid rgba(249,115,22,.14);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(17,24,39,.10), 0 10px 30px rgba(249,115,22,.08);
+  padding: 28px 30px 30px;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.logo-reservia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.logo-reservia img {
+  width: 92px;
+  height: 92px;
+  padding: 10px;
+  border: 4px solid var(--primaryB);
+  border-radius: 50%;
+  background: var(--inputFill);
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(249,115,22,.15);
+}
+
+/* TÍTULOS */
+.div-titulos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.div-titulos h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--textTitle);
+}
+
+.div-titulos h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--textBody);
+}
+
+/* FORMULARIO */
+.div-hijo-1 {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  width: 100%;
+  padding: 1%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.div-hijo-1 span {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--textTitle);
+}
+
+.div-hijo-1 input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 5%;
+  border: 2px solid var(--borderInput);
+  border-radius: 12px;
+  outline: none;
+  background-color: var(--inputFill);
+  color: var(--textBody);
+  box-sizing: border-box;
+  transition: all .25s ease;
+}
+
+.div-hijo-1 input:focus {
+  border-color: var(--primaryB);
+  box-shadow: 0 0 0 4px rgba(249,115,22,.10);
+}
+
+/* COLUMNA DERECHA */
+.div-2 {
+  display: none;
+}
+
+/* ENLACES Y BOTÓN */
+.div-hijo-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.div-enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.div-enlaces a {
+  padding: 2%;
+  color: var(--textBody);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.div-enlaces a:hover {
+  color: var(--primaryB);
+}
+
+.div-hijo-2 button {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 24px;
+  border: 2px solid #111827;
+  border-radius: 12px;
+  background-color: var(--primaryB);
+  color: var(--textTitle);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.div-hijo-2 button:hover {
+  background-color: var(--primaryG);
+  transform: translateY(-1px);
+}

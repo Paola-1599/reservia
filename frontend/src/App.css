@@ -1,0 +1,31 @@
+:root {
+  --background: #111827;
+  --primaryG: #6B7280;
+  --primaryB: #F97316;
+  --surface1: #1F2937;
+  --surface2: #374151;
+  --textTitle: #FFFFFF;
+  --textBody: #D1D5DB;
+  --textSubtle: #9CA3AF;
+  --borderInput: #6B7280;
+  --feedbackError: #F97316;
+  --inputFill: #111827;
+
+    
+    --header-height: 140px;
+
+
+}
+
+/*Estructura general*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background);
+  width: 100%;
+  height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+

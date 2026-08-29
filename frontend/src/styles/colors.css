@@ -1,0 +1,32 @@
+/* ===========================
+   Paleta de colores Reservia
+=========================== */
+
+:root {
+
+    /* Fondos */
+    --background: #FFF8F2;
+    --surface1: #FFFFFF;
+    --surface2: #FFF1E7;
+    --inputFill: #FFFFFF;
+
+    /* Colores principales */
+    --primaryB: #F97316;
+    --primaryG: #C2410C;
+
+    /* Textos */
+    --textTitle: #111827;
+    --textBody: #4B5563;
+    --textSubtle: #9CA3AF;
+
+    /* Bordes */
+    --borderInput: #E5E7EB;
+
+    /* Feedback */
+    --feedbackError: #DC2626;
+    --feedbackSuccess: #D97706;
+    --feedbackWarning: #F59E0B;
+
+    /* Header */
+    --header-height: 100px;
+}

@@ -1,0 +1,188 @@
+
+.contenedorPagina {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layoutPrincipal {
+   display: flex;
+   width: 100%;
+}
+
+.CajaPadre {
+    flex: 1;
+    overflow: auto;
+    flex-wrap: wrap;
+    background:
+      radial-gradient(circle at top left, rgba(249,115,22,.08), transparent 30%),
+      linear-gradient(180deg, #FFF8F2 0%, #FFFFFF 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------------- Header del catálogo ----------------*/
+
+.headerCatalogo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5%;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: left;
+}
+
+.btnAtras {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  border: none;
+  font-size: 16px;
+    color: #111827;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0;
+}
+
+.iconAtras {
+  width: 30px;
+  margin-right: 12px;
+}
+
+.btnAtras:hover {
+    color: #F97316;
+}
+
+.headerCatalogo h1 {
+  color: #F97316;
+  font-size: 30px;
+  margin: 0;
+  text-align: left;
+}
+
+.CajaPadre hr {
+  border: none;
+  border-top: 2px solid #F97316;
+  width: 90%;
+  margin: 10px auto 30px;
+  flex: 1;
+  padding: 20px;
+}
+
+/*---------------- Tarjetas de servicios ----------------*/
+
+.contenidoServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.tarjetaServicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 450px;
+        border-radius: 18px;
+    text-align: center;
+        border: 3px solid #F97316;
+        box-shadow:
+            0 18px 28px rgba(17, 24, 39, 0.10),
+            0 10px 20px rgba(249,115,22,.18),
+            inset 0 1px 0 rgba(255,255,255,.9);
+        background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,248,242,.98) 100%);
+    overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: floatCard 5.5s ease-in-out infinite;
+}
+
+.tarjetaServicio:hover{
+        transform: translateY(-6px) scale(1.03);
+    cursor: pointer;
+        box-shadow:
+            0 24px 36px rgba(17, 24, 39, 0.12),
+            0 14px 24px rgba(249,115,22,.24),
+            inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.tarjetaServicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjetaServicio h3{
+    color: #111827;
+    margin: 5px;
+}
+
+.tarjetaServicio p {
+    color: #6B7280;
+    padding: 0 10px;
+    margin: 5px;
+    overflow: hidden;
+
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.tarjetaServicio span {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #111827;
+}
+
+.precio {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.tarjetaServicio button {
+    margin: 10px auto 20px;
+    padding: 10px;
+    background-color: #F97316;
+    border: 2px solid #111827;
+    border-radius: 12px;
+    color: #111827;
+    cursor: pointer;
+    font-weight: bold;
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+.tarjetaServicio button:hover {
+    transform: scale(1.08);
+    background-color: #EA580C;
+    color: #111827;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/*---------------- Responsive ----------------*/
+
+@media (max-width: 768px) {
+    .headerCatalogo {
+        align-items: center;
+    }
+
+    .contenidoServicios {
+        flex-direction: column;
+        align-items: center;
+    }
+}

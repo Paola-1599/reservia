@@ -1,0 +1,25 @@
+{
+  "short_name": "RESERVIA",
+  "name": "RESERVIA",
+  "icons": [
+    {
+      "src": "LogoReservia.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "LogoReservia.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "LogoReservia.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

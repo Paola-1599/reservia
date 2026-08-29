@@ -1,0 +1,26 @@
+
+
+/* CONTENEDOR MENÚ + CONTENIDO */
+.cuerpo {
+  display: flex;
+  flex: 1;
+  background:
+    radial-gradient(circle at top left, rgba(249,115,22,.08), transparent 30%),
+    linear-gradient(180deg, #FFF8F2 0%, #FFFFFF 100%);
+  overflow: hidden;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  align-content: flex-start;
+
+  padding: 35px;
+  background: transparent;
+
+  overflow-y: auto;
+  box-sizing: border-box;
+}

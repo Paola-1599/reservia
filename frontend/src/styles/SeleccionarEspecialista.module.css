@@ -1,0 +1,198 @@
+.CajaPadre {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+/* HEADER */
+
+.headerSeleccionarEspecialistas {
+    width: 90%;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.btnAtras {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--textTitle);
+    font-size: 16px;
+    transition: color .25s ease;
+}
+
+.iconAtras {
+    width: 30px;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+.headerSeleccionarEspecialistas h1 {
+    margin: 0;
+    color: var(--primaryB);
+    font-size: 30px;
+}
+
+.CajaPadre hr {
+    width: 90%;
+    margin: 10px auto 30px;
+    border: none;
+    border-top: 2px solid var(--primaryB);
+}
+
+/* CONTENEDOR */
+
+.selectorContainer {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background: var(--inputFill);
+    padding: 30px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(113,176,197,.18);
+
+    box-shadow:
+        0 8px 26px rgba(113,176,197,.12),
+        0 4px 12px rgba(249,115,22,.08);
+}
+
+/* SELECT */
+
+.selectorWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.selector {
+    width: 100%;
+    padding: 15px 18px;
+
+    border: 2px solid var(--borderInput);
+    border-radius: 10px;
+
+    background: var(--surface2);
+
+    color: var(--textBody);
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.selector:hover {
+    border-color: var(--primaryB);
+}
+
+.selector:focus {
+    outline: none;
+    border-color: var(--primaryB);
+    background: var(--inputFill);
+
+    box-shadow: 0 0 0 4px rgba(113,176,197,.12);
+}
+
+/* FLECHA */
+
+.selectorWrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+
+    width: 10px;
+    height: 10px;
+
+    border-right: 3px solid var(--textSubtle);
+    border-bottom: 3px solid var(--textSubtle);
+
+    transform: translateY(-65%) rotate(45deg);
+
+    pointer-events: none;
+
+    transition: .25s;
+}
+
+.selectorWrapper:focus-within::after {
+    border-color: var(--primaryB);
+    transform: translateY(-35%) rotate(-135deg);
+}
+
+/* BOTÓN */
+
+.boton {
+    width: fit-content;
+    min-width: 220px;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primaryB);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.boton:hover {
+    background: var(--primaryG);
+    color: #111827;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 22px rgba(166,216,133,.45);
+}
+
+.boton:active {
+    transform: scale(.98);
+}
+
+.boton:disabled {
+    background: var(--surface1);
+    color: var(--textSubtle);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+    .selectorContainer{
+        width:95%;
+        padding:20px;
+    }
+
+    .boton{
+        width:100%;
+    }
+
+}

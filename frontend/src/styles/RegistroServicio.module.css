@@ -1,0 +1,221 @@
+.contenedor {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: var(--background);
+}
+
+.contenedor-2 {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* HEADER */
+
+.contenedor-2 h2 {
+  color: var(--primaryB);
+  font-size: 30px;
+  margin: 0;
+}
+
+.contenedor-2 hr {
+  border: none;
+  border-top: 2px solid var(--primaryB);
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btnAtras {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--textTitle);
+  font-size: 16px;
+  transition: color .25s ease;
+}
+
+.btnAtras img {
+  width: 30px;
+}
+
+.btnAtras:hover {
+  color: var(--primaryB);
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 10px;
+
+  background: var(--inputFill);
+  padding: 30px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(249,115,22,.12);
+
+  box-shadow:
+      0 8px 28px rgba(249,115,22,.08),
+      0 4px 12px rgba(249,115,22,.08);
+}
+
+.columnIzquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: var(--textTitle);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+
+.input,
+.textarea {
+  padding: 14px;
+  border: 2px solid var(--borderInput);
+  border-radius: 10px;
+  background-color: var(--surface2);
+  color: var(--textBody);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  transition: all .25s ease;
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: var(--primaryB);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  background: var(--inputFill);
+  border-color: var(--primaryB);
+
+  box-shadow: 0 0 0 4px rgba(249,115,22,.08);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* IMAGEN */
+
+.fileInput {
+  display: none;
+}
+
+.btnImagen {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  border: 2px solid var(--primaryB);
+
+  background: var(--surface1);
+
+  color: var(--primaryB);
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.btnImagen:hover {
+  background: var(--primaryB);
+  color: white;
+
+  box-shadow: 0 6px 18px rgba(249,115,22,.25);
+}
+
+.nombreArchivo {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--textSubtle);
+}
+
+/* BOTÓN */
+
+.btnAñadir {
+  grid-column: 1/-1;
+
+  width: fit-content;
+  min-width: 190px;
+
+  padding: 14px 34px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--primaryB);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+
+  margin-top: 15px;
+}
+
+.btnAñadir:hover {
+  background: var(--primaryG);
+  color: #111827;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(249,115,22,.2);
+}
+
+.btnAñadir:active {
+  transform: scale(.98);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.formContainer{
+    grid-template-columns:1fr;
+    padding:25px;
+}
+
+.btnAñadir{
+    width:100%;
+}
+
+}

@@ -1,0 +1,347 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 40px;
+}
+
+/* ================= HEADER ================= */
+
+.headerWrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title {
+    color: var(--primaryB);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.wrapper hr {
+    width: 90%;
+    margin: 10px auto 30px;
+    border: none;
+    border-top: 2px solid var(--primaryB);
+}
+
+.btnAtras {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--textTitle);
+    font-size: 16px;
+    padding: 0;
+    transition: color .25s;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+.iconAtras {
+    width: 30px;
+}
+
+/* ================= TABLA ================= */
+
+.tableMainContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchContainer label {
+    color: var(--textBody);
+    font-weight: 600;
+}
+
+.inputSearch {
+    width: 230px;
+    padding: 10px 14px;
+    border: 2px solid var(--borderInput);
+    background: var(--inputFill);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--textBody);
+    transition: .25s;
+}
+
+.inputSearch:focus {
+    border-color: var(--primaryB);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(249,115,22,.1);
+}
+
+/* ================= CONTENEDOR ================= */
+
+.tableContainer {
+    overflow-x: auto;
+    border-radius: 16px;
+    background: var(--inputFill);
+    box-shadow: 0 12px 30px rgba(17,24,39,.10), 0 6px 20px rgba(249,115,22,.12);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--textBody);
+}
+
+.table thead {
+    background: linear-gradient(90deg,var(--primaryB),#FDBA74);
+}
+
+.table th {
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.table tbody tr {
+    transition: .25s;
+}
+
+.table tbody tr:nth-child(even) {
+    background: var(--surface2);
+}
+
+.table tbody tr:hover {
+    background: rgba(249,115,22,.10);
+}
+
+/* ================= BADGES ================= */
+
+.badgeActivo,
+.badgeInactivo {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.badgeActivo {
+    background: var(--primaryG);
+}
+
+.badgeInactivo {
+    background: var(--feedbackError);
+}
+
+/* ================= BOTONES ================= */
+
+.actionsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btnEditar,
+.btnEliminar {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+    background: white;
+}
+
+.btnEditar {
+    box-shadow: 0 4px 14px rgba(249,115,22,.22);
+}
+
+.btnEliminar {
+    box-shadow: 0 4px 14px rgba(220,38,38,.22);
+}
+
+.btnEditar img,
+.btnEliminar img {
+    width: 20px;
+    height: 20px;
+}
+
+.btnEditar:hover {
+    background: var(--primaryB);
+    transform: translateY(-2px);
+}
+
+.btnEliminar:hover {
+    background: var(--feedbackError);
+    transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+.footerTable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.btnExportarExcel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,var(--primaryB),#FBAB5E);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .25s;
+    box-shadow: 0 8px 20px rgba(249,115,22,.2);
+}
+
+.btnExportarExcel:hover {
+    transform: translateY(-2px);
+}
+
+.footerTable nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rowSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--textTitle);
+    font-weight: 600;
+}
+
+.rowSelector select {
+    padding: 7px 10px;
+    border: 2px solid var(--borderInput);
+    border-radius: 8px;
+    background: white;
+}
+
+.paginationNav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.pageItem button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    color: var(--textBody);
+    transition: .25s;
+}
+
+.pageItem button:hover {
+    background: var(--primaryB);
+    color: white;
+}
+
+.pageInfo {
+    font-weight: 600;
+    color: var(--textTitle);
+}
+
+/* ================= TABLA SIMPLE ================= */
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(249,115,22,.12);
+}
+
+.tabla th {
+    background: var(--primaryB);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.tabla tbody tr:hover {
+    background: rgba(249,115,22,.08);
+}
+
+/* ================= PAGINACIÓN ================= */
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    background: var(--primaryB);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: var(--primaryG);
+    color: #111827;
+}
+
+.paginacion button:disabled {
+    background: #E5E7EB;
+    cursor: not-allowed;
+}
+
+.paginaActiva {
+    background: var(--primaryG) !important;
+    color: #111827 !important;
+    font-weight: 700;
+}
+
+.Eliminar {
+    width: 20px;
+}

@@ -1,0 +1,342 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* HEADER */
+
+.headerWrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title {
+    margin: 0;
+    color: var(--primaryB);
+    font-size: 30px;
+}
+
+.wrapper hr {
+    width: 90%;
+    margin: 10px auto 30px;
+    border: none;
+    border-top: 2px solid var(--primaryB);
+}
+
+/* BOTÓN ATRÁS */
+
+.btnAtras {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--textTitle);
+    font-size: 16px;
+    transition: color .25s ease;
+}
+
+.iconAtras {
+    width: 30px;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+/* CONTENEDOR */
+
+.tableMainContainer {
+    width: 90%;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background: var(--inputFill);
+    padding: 28px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(249,115,22,.14);
+
+    box-shadow:
+        0 8px 26px rgba(249,115,22,.12),
+        0 4px 12px rgba(17,24,39,.06);
+}
+
+/* BUSCADOR */
+
+.searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchContainer label {
+    color: var(--textBody);
+    font-weight: 600;
+}
+
+.inputSearch {
+    width: 240px;
+    padding: 11px 14px;
+
+    border: 2px solid var(--borderInput);
+    border-radius: 10px;
+
+    background: var(--surface2);
+
+    color: var(--textBody);
+    font-size: 15px;
+
+    transition: all .25s ease;
+}
+
+.inputSearch:hover {
+    border-color: var(--primaryB);
+}
+
+.inputSearch:focus {
+    outline: none;
+    border-color: var(--primaryB);
+    background: var(--inputFill);
+
+    box-shadow: 0 0 0 4px rgba(113,176,197,.12);
+}
+
+/* TABLA */
+
+.tableContainer {
+    width: 100%;
+}
+
+.tableScroll {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--textBody);
+    font-size: 14px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.table thead {
+    background: var(--primaryB);
+}
+
+.table th {
+    padding: 14px;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table td {
+    padding: 14px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: var(--surface1);
+}
+
+.table tbody tr:nth-child(even) {
+    background: var(--surface2);
+}
+
+.table tbody tr {
+    transition: .2s;
+}
+
+.table tbody tr:hover {
+    background: rgba(249,115,22,.10);
+}
+
+.table td,
+.table th {
+    border-right: 1px solid rgba(255,255,255,.4);
+}
+
+.table td:last-child,
+.table th:last-child {
+    border-right: none;
+}
+
+/* ICONOS */
+
+.thFechaHora {
+    position: relative;
+}
+
+.iconSort,
+.iconCalendar {
+    margin-left: 8px;
+    cursor: pointer;
+    color: var(--primaryB);
+    transition: .2s;
+}
+
+.iconSort:hover,
+.iconCalendar:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+
+.footerTable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* BOTÓN EXPORTAR */
+
+.btnExportarExcel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 180px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primaryB);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.btnExportarExcel:hover {
+    background: var(--primaryG);
+    color: #111827;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(249,115,22,.22);
+}
+
+/* PAGINACIÓN */
+
+.footerTable nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.rowSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--textTitle);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rowSelector select {
+    padding: 8px 10px;
+
+    border: 2px solid var(--borderInput);
+    border-radius: 8px;
+
+    background: var(--surface2);
+    color: var(--textBody);
+}
+
+.paginationNav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.pageItem button {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--surface1);
+
+    color: var(--textBody);
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.pageItem button:hover {
+    background: var(--primaryB);
+    color: white;
+}
+
+.pageInfo {
+    padding: 0 10px;
+    color: var(--textTitle);
+    font-weight: 600;
+}
+
+/* CALENDARIO */
+
+.dateFilterWrapper {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 999;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+    .tableMainContainer{
+        width:95%;
+        padding:20px;
+    }
+
+    .searchContainer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .inputSearch{
+        width:100%;
+    }
+
+    .footerTable{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .btnExportarExcel{
+        width:100%;
+    }
+
+}

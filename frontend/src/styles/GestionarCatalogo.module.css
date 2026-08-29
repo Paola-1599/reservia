@@ -1,0 +1,181 @@
+/*Estructura general*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background);
+}
+
+.CajaPadre {
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*Estilos header del catalogo*/
+.headerCatalogo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5%;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: left;
+}
+
+.btnAtras {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--textTitle);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0;
+}
+
+.iconAtras {
+    width: 30px;
+    margin-right: 12px;
+}
+
+.btnAtras:hover {
+    color: var(--primaryB);
+}
+
+.headerCatalogo h1 {
+    color: var(--primaryB);
+    font-size: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+.CajaPadre hr {
+    border: none;
+    border-top: 2px solid var(--primaryB);
+    width: 90%;
+    margin: 10px auto 30px;
+}
+
+/*Tarjetas de los servicios*/
+
+.contenidoServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.tarjetaServicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 450px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetaServicio:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(249, 115, 22, 0.40);
+}
+
+.tarjetaServicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjetaServicio h3 {
+    color: #111827;
+    margin: 5px;
+}
+
+.tarjetaServicio p {
+    color: var(--textBody);
+    padding: 0 10px;
+    margin: 5px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.tarjetaServicio span {
+    margin: 5px 0;
+    font-weight: bold;
+    color: var(--primaryB);
+}
+
+.precio {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/*Acciones*/
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 5px 15px 15px;
+}
+
+.btnEditar,
+.btnEliminar {
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border: 1px solid var(--borderInput);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(17, 24, 39, 0.10);
+    transition: all 0.2s ease;
+}
+
+.btnEditar img,
+.btnEliminar img {
+    width: 22px;
+    height: 25px;
+}
+
+.btnEditar:hover {
+    background: var(--primaryB);
+    transform: scale(1.1);
+}
+
+.btnEliminar:hover {
+    background: #DC2626;
+    transform: scale(1.1);
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    .headerCatalogo {
+        align-items: center;
+    }
+
+    .contenidoServicios {
+        flex-direction: column;
+        align-items: center;
+    }
+}
