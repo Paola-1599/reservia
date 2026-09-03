@@ -233,7 +233,8 @@ Aplicación disponible en: `http://localhost:3000`
 | `MYSQL_USER` | Usuario de MySQL | root |
 | `MYSQL_PASSWORD` | Contraseña MySQL | xxxxxxx |
 | `MYSQL_DATABASE` | Nombre de la base de datos | reservia |
-| `EMAIL_USER` | Correo para envío de emails | soportepsiquenova@gmail.com |
+| `EMAIL_USER` | Correo para envío de emails | 
+psiquenova.soportes@gmail.com |
 | `EMAIL_PASS` | Contraseña de aplicación de email | xxxxxxx |
 | `JWT_SECRET` | Clave secreta para firmar JWT | Reservia@__1234 |
 | `PORT` | Puerto del servidor | 4000 |
